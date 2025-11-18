@@ -1,0 +1,102 @@
+bodybody {
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('contactbg.jpg') center/cover no-repeat fixed;
+    color: white;
+}
+nav {
+    background: rgb(72, 71, 71);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+
+}
+nav a {
+    text-decoration: none;
+    color:aliceblue;
+    background-color: rgb(88, 82, 82);
+
+    
+    
+}
+
+nav a:hover,
+nav a.active {
+    color:yellowgreen
+    
+    
+}
+
+.content {
+    text-align: center;
+    margin-top: 60px;
+    animation: fadeIn 1.3s ease-out;
+}
+
+.container {
+    background: rgba(24, 69, 83, 0.15);
+    backdrop-filter: blur(8px);
+    width: 87%;
+    max-width: 467px;
+    margin: auto;
+    padding: 27px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    animation: slideUp 1.2s ease-out;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: yellowgreen
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px ;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e6b800;
+}
+
+#formStatus {
+    margin-top: 17px;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+
+
+footer{
+    background-color: antiquewhite;
+    color: blue;
+}
