@@ -46,7 +46,7 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  margin-top: 0; /* Remove any margin since navbar is fixed */
+  margin-top: 0; 
 }
 
 .hero-about h1 {
