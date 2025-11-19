@@ -17,23 +17,61 @@ body {
   padding: 0 20px;
 }
 
-/* Bootstrap Navbar Customization */
+/* Bootstrap Navbar Customization - Centered Layout */
+.navbar {
+  background: #1b263b !important;
+  padding: 15px 0;
+}
+
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
+  color: white !important;
+  margin-right: 0;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 10px;
 }
 
 .navbar-nav .nav-link {
   font-weight: 600;
-  padding: 8px 15px;
-  border-radius: 4px;
+  padding: 8px 20px;
+  border-radius: 20px;
   transition: all 0.3s ease;
+  color: white !important;
+  border: 2px solid transparent;
 }
 
-.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: #e63946 !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #e63946;
+}
+
 .navbar-nav .nav-link.active {
   color: #e63946 !important;
   background: rgba(255, 255, 255, 0.1);
+  border-color: #e63946;
+}
+
+/* Remove the default Bootstrap toggle button margin */
+.navbar-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
 }
 
 /* HERO */
@@ -46,7 +84,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  margin-top: 0; 
 }
 
 .hero-about h1 {
@@ -229,6 +266,16 @@ body {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    gap: 5px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    margin: 2px 0;
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -252,6 +299,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
   .facts-grid {
     grid-template-columns: 1fr;
   }
@@ -269,13 +320,4 @@ body {
   .culture-section h2 {
     font-size: 1.6rem;
   }
-}
-
-/* Additional Bootstrap compatibility */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
 }
