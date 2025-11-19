@@ -60,7 +60,6 @@ body {
   border-color: #e63946;
 }
 
-/* Remove the default Bootstrap toggle button margin */
 .navbar-toggler {
   border: 2px solid rgba(255, 255, 255, 0.5);
   padding: 6px 10px;
@@ -74,9 +73,9 @@ body {
   box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
 }
 
-/* HERO */
+/* HERO - REDUCED SIZE & CENTERED */
 .hero-about {
-  height: 50vh;
+  height: 35vh; /* Reduced from 50vh */
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
               url('https://source.unsplash.com/random/1600x900/?uganda') center/cover no-repeat;
   display: flex;
@@ -84,22 +83,37 @@ body {
   align-items: center;
   text-align: center;
   color: white;
+  padding: 40px 20px;
+}
+
+.hero-about .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .hero-about h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2.2rem; /* Reduced from 2.5rem */
+  margin-bottom: 12px;
   text-transform: capitalize;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .hero-about p {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Reduced from 1.2rem */
   max-width: 600px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 auto;
 }
 
 /* ABOUT CONTENT */
 .about-section {
-  padding: 50px 0;
+  padding: 40px 0; /* Reduced from 50px */
 }
 
 .about-section h2 {
@@ -124,7 +138,7 @@ body {
 
 .about-image img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -276,17 +290,22 @@ body {
     margin: 2px 0;
   }
   
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .hero-about {
+    height: 30vh; /* Further reduced on mobile */
+    padding: 30px 20px;
   }
   
   .hero-about h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Smaller on mobile */
   }
   
   .hero-about p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller on mobile */
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
   
   .facts-grid {
@@ -303,16 +322,20 @@ body {
     font-size: 1.5rem;
   }
   
-  .facts-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .hero-about {
-    height: 40vh;
+    height: 25vh; 
   }
   
   .hero-about h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  
+  .hero-about p {
+    font-size: 0.9rem;
+  }
+  
+  .facts-grid {
+    grid-template-columns: 1fr;
   }
   
   .about-section h2,
