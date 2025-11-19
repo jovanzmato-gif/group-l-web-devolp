@@ -1,231 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    /* HEADER */
-    .site-header {
-      background: #1b263b;
-      color: white;
-      padding: 15px 0;
-    }
+/* Bootstrap Navbar Customization */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.navbar-nav .nav-link {
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #e63946 !important;
+  background: rgba(255, 255, 255, 0.1);
+}
 
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+/* HERO */
+.hero-about {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://source.unsplash.com/random/1600x900/?uganda') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 0; /* Remove any margin since navbar is fixed */
+}
 
-    .main-nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
+.hero-about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
 
-    .main-nav a.active,
-    .main-nav a:hover {
-      color: #e63946;
-      background: rgba(255, 255, 255, 0.1);
-    }
+.hero-about p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
 
-    /* HERO */
-    .hero-about {
-      height: 50vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                  url('https://source.unsplash.com/random/1600x900/?uganda') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
+/* ABOUT CONTENT */
+.about-section {
+  padding: 50px 0;
+}
 
-    .hero-about h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
+.about-section h2 {
+  font-size: 2rem;
+  color: #1b263b;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-    .hero-about p {
-      font-size: 1.2rem;
-      max-width: 600px;
-    }
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+}
 
-    /* ABOUT CONTENT */
-    .about-section {
-      padding: 50px 0;
-    }
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
 
-    .about-section h2 {
-      font-size: 2rem;
-      color: #1b263b;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
+/* FACTS SECTION */
+.facts-section {
+  background: #1b263b;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin: 40px 0;
+}
 
-    .about-text p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-    }
+.facts-section h2 {
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-    .about-image img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
 
-    /* FACTS SECTION */
-    .facts-section {
-      background: #1b263b;
-      color: white;
-      padding: 40px 20px;
-      border-radius: 8px;
-      margin: 40px 0;
-    }
+.fact-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-    .facts-section h2 {
-      color: white;
-      margin-bottom: 30px;
-    }
+.fact-card:hover {
+  transform: translateY(-5px);
+}
 
-    .facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+.fact-card h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
 
-    .fact-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
+.fact-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
-    .fact-card h3 {
-      color: #e63946;
-      margin-bottom: 10px;
-    }
+/* CULTURE SECTION */
+.culture-section {
+  padding: 40px 0;
+}
 
-    /* CULTURE SECTION */
-    .culture-section {
-      padding: 40px 0;
-    }
+.culture-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .culture-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    .culture-card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.culture-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .culture-image {
-      height: 160px;
-    }
+.culture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-    .culture-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.culture-image {
+  height: 200px;
+  overflow: hidden;
+}
 
-    .culture-content {
-      padding: 20px;
-    }
+.culture-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-    .culture-content h3 {
-      color: #1b263b;
-      margin-bottom: 10px;
-    }
+.culture-card:hover .culture-image img {
+  transform: scale(1.05);
+}
 
-    /* FOOTER */
-    .site-footer {
-      background: #1b263b;
-      color: white;
-      padding: 25px 0;
-      text-align: center;
-    }
+.culture-content {
+  padding: 20px;
+}
 
-    .scroll-top {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #e63946;
-      color: white;
-      border: none;
-      padding: 12px 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-    }
+.culture-content h3 {
+  color: #1b263b;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .about-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
-      .hero-about h1 {
-        font-size: 2rem;
-      }
-    }
+.culture-content p {
+  color: #666;
+  line-height: 1.5;
+}
 
-    @media (max-width: 480px) {
-      .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-      
-      .facts-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+/* FOOTER */
+.site-footer {
+  background: #1b263b;
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 5px;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: #d62828;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
   
+  .hero-about h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-about p {
+    font-size: 1rem;
+  }
+  
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-about {
+    height: 40vh;
+  }
+  
+  .hero-about h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-section h2,
+  .facts-section h2,
+  .culture-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Additional Bootstrap compatibility */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
