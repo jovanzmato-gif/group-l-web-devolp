@@ -1,0 +1,45 @@
+.A1{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    color: yellow;
+}
+body{
+    background-color: green;
+    justify-content: space-between;
+}
+.B1{
+    background-color:yellowgreen;
+    color: blue;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: space-around;
+    
+}
+.A2{
+    display: flex;
+    justify-content: space-between;
+
+}
+.main{
+    display: block;
+    justify-content: space-around;
+}
+.footer{
+    color: blue;
+    font: bold;
+    background-color:rgb(121, 163, 36) ;
+}
+.nav{
+    display: block;
+    justify-content:space-around;
+    justify-content: space-between;
+    padding-left: 5%;
+    font-family: initial;
+    background-color: rgba(57, 92, 5, 1);
+
+}
+.button{
+    color: blue;
+    background-color: rgb(134, 134, 15);
+}
