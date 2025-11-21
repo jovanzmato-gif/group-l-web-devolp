@@ -1,14 +1,68 @@
-/* Color */
-:root {
-  --accent: #ba1f3b;
-  --bg: #3a3a3b;
-  --text: #143df2;
+.hero-img {
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+  opacity: 0;
+  transform: scale(2);
+  animation: heroFade 1s ease-out forwards;
 }
-/* Image section */
-img {
-  height:50vh ;
+/* === HERO ANIMATIONS === */
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Text slide-in animations */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+.fade-slide-up.delay-2 {
+  animation-delay: 2s;
+}
+
+.fade-slide-up.delay-5 {
+  animation-delay: 4s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card title animations */
+.card h5 {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: cardPop 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes cardPop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*  images in cards */
+.card-img-top {
+  height: 250px;
   object-fit: cover;
 }
+
 /* page body */
 body {
   background-color: #3a3a3b;
@@ -31,35 +85,35 @@ body {
   background: rgba(0, 0, 0, 0.947);
   color: red !important;
 }
-
-
-.btn-accent {
-  background: var(--accent);
-  color: #602525;
-  border-radius: .75rem;
-  padding: .6rem 1.2rem;
-}
-
-.btn-outline-accent {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  border-radius: .75rem;
-}
-
-.highlight-card {
+.card {
   border-radius: var(--radius);
   background: var(--card-bg);
   overflow: hidden;
   transition: all .25s ease;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border:none;
 }
 
-.highlight-card:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.18);
 }
-
-.highlight-card h5 {
-  font-weight: 600;
+.card p {
+  color: aliceblue;
 }
+
+.card h5 {
+  font-weight: 600;
+  color:greenyellow;
+}
+#scrollTop {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  display: none; /* default hidden */
+}
+
+
 
